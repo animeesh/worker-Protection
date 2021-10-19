@@ -102,6 +102,7 @@ def draw_boxes(img, bbox, identities=None, offset=(0, 0)):
         # create new buffer for new object
         if id not in data_deque:  
           data_deque[id] = deque(maxlen= opt.trailslen)
+            #below code is for time dwelling
           dtime[id] = datetime.datetime.now()
           dwell_time[id]=0
         else:
